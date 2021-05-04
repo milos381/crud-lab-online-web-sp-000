@@ -1,10 +1,11 @@
 import cuid from 'cuid';
+export const cuidFn = cuid;
 let restaurantAfterDelete;
 let reviewsAfterDelete;
-export default (state = {
+export default function manageRestaurant(state = {
     restaurants: [],
     reviews: []
-}, action) => {
+}, action){
     switch (action.type) {
         case 'ADD_RESTAURANT':
             const restaurant = {
