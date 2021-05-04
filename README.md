@@ -1,3 +1,6 @@
+# Note about the tests
+* I am failing all the tests, but I did what I was asked to do. I am not going to change the lab for now. Ask if this is according to MBG protocol
+
 # Create and Delete Lab
 
 ## Objectives
