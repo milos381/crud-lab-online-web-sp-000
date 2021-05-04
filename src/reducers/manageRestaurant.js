@@ -2,7 +2,8 @@ import cuid from 'cuid';
 let restaurantAfterDelete;
 let reviewsAfterDelete;
 export default (state = {
-    restaurants: []
+    restaurants: [],
+    reviews: []
 }, action) => {
     switch (action.type) {
         case 'ADD_RESTAURANT':

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReviewInput from '../components/reviews/ReviewInput';
 import Reviews from '../components/reviews/Reviews';
 import { connect } from 'react-redux';
+import {deleteReview} from '../actions/restaurantAction'
 class ReviewsContainer extends Component {
 
   render() {
@@ -10,7 +11,10 @@ class ReviewsContainer extends Component {
         <ReviewInput 
         restaurantId={this.props.restaurant.id}
         />
-        <Reviews />
+        <Reviews
+        reviews={this.props.reviews}
+        deleteReview={this.props.deleteReview}
+        />
       </div>
     )
   }
@@ -20,4 +24,4 @@ const mapStateToProps = state => {
     reviews: state.reviews
   })
 }
-export default connect(mapStateToProps)(ReviewsContainer);
+export default connect(mapStateToProps, {deleteReview})(ReviewsContainer);
